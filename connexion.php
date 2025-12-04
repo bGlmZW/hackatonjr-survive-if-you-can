@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 }
 
                 // REDIRECTION : Directement vers shop.php (car tout est à la racine)
-                header("Location: shop.php");
+                header("Location: user_page.php");
                 exit;
                 
             } else {
