@@ -1,0 +1,346 @@
+/* -------------------- */
+/* --- RESET / BASE --- */
+/* -------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-dark: #0A0A0A; /* Noir Profond */
+    --color-accent: #E50000; /* Rouge Vif */
+    --color-text: #F0F0F0; /* Blanc Cassé */
+    --font-primary: 'Oswald', sans-serif; /* Police Dure/Condensée */
+}
+
+body {
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #FF6666;
+}
+
+
+#countdown {
+    background-color: #1A1A1A; /* Fond légèrement plus clair pour le contraste */
+    border: 3px solid var(--color-accent);
+    padding: 15px 30px;
+    margin: 20px 0;
+    font-family: 'Courier New', monospace; /* Police numérique/terminale */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* -------------------- */
+/* --- EN-TÊTE (HEADER) --- */
+/* -------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 2px solid var(--color-accent); /* Ligne de séparation rouge */
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--color-text);
+    letter-spacing: 5px;
+}
+
+/* Style des icônes de navigation */
+.icon-nav {
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+}
+
+.nav-icon {
+    font-size: 1.5em; /* Taille des icônes */
+    color: var(--color-text); /* Couleur des icônes (Blanc) */
+    padding: 5px;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-icon:hover {
+    color: var(--color-accent); /* Icône devient rouge au survol */
+}
+
+
+/* -------------------- */
+/* --- SECTION PRINCIPALE (HERO) --- */
+/* -------------------- */
+
+.hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-family: var(--font-primary);
+    font-size: 4em;
+    margin-bottom: 10px;
+    letter-spacing: 8px;
+    color: var(--color-text);
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 50px; /* Plus grand espace sans le timer */
+    color: #CCCCCC;
+}
+
+
+/* --- BOUTON D'ACTION --- */
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-dark); /* Texte noir sur fond rouge */
+    padding: 15px 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--color-accent); /* Effet de lueur rouge */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #FF6666;
+    box-shadow: 0 0 20px #FF6666;
+}
+
+/* --- EFFET GLITCH (Optionnel mais immersif) --- */
+
+.glitch {
+    position: relative;
+}
+
+.glitch:before,
+.glitch:after {
+    content: attr(data-text); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-dark);
+    clip: rect(0, 0, 0, 0);
+}
+
+.glitch:after {
+    left: 2px;
+    text-shadow: -1px 0 var(--color-accent); 
+}
+
+.glitch:before {
+    left: -2px;
+    text-shadow: 1px 0 #00FFC0; 
+}
+
+
+/* -------------------- */
+/* --- PIED DE PAGE (FOOTER) --- */
+/* -------------------- */
+
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px dashed #333;
+    font-size: 0.8em;
+    color: #666;
+}
+
+
+/* -------------------- */
+/* --- BOUTIQUE (SHOP) --- */
+/* -------------------- */
+
+.shop-container {
+    max-width: 1200px; /* Limite la largeur totale pour que ça reste centré */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* LA GRILLE MAGIQUE */
+.product-grid {
+    display: grid;
+    /* Crée autant de colonnes que possible. Chaque colonne fait minimum 280px */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 30px; /* Espace entre les cartes */
+    justify-content: center;
+}
+
+/* La Carte Produit */
+.product-card {
+    background-color: #111;
+    border: 1px solid #333;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, border-color 0.3s;
+    height: 100%; /* Assure que toutes les cartes ont la même hauteur */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+    box-shadow: 0 5px 15px rgba(229, 0, 0, 0.2);
+}
+
+/* L'Image : C'est ici que ça bloquait souvent */
+.card-image {
+    width: 100%;
+    height: 250px; /* HAUTEUR FIXE OBLIGATOIRE pour un alignement propre */
+    overflow: hidden;
+    background-color: #000;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* L'image remplit le cadre sans être déformée */
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.5s;
+}
+
+.product-card:hover .card-image img {
+    filter: grayscale(0%);
+    transform: scale(1.05); /* Petit zoom sympa au survol */
+}
+
+/* Infos Textes */
+.card-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Pousse le contenu pour remplir la carte */
+}
+
+.card-info h3 {
+    font-family: var(--font-primary);
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--color-text);
+}
+
+.price {
+    font-size: 1.2em;
+    color: #888;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Bouton */
+.btn-shop {
+    background-color: transparent;
+    border: 2px solid var(--color-accent);
+    color: var(--color-accent);
+    padding: 10px;
+    margin-top: auto; /* Pousse le bouton tout en bas de la carte */
+    font-family: var(--font-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-shop:hover {
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+}
+
+/* Badges */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    padding: 5px 10px;
+    font-size: 0.8em;
+    font-weight: bold;
+    font-family: var(--font-primary);
+    z-index: 2;
+}
+
+.shop-container{
+    text-align:center;
+}
+
+.shop-header{
+    margin-top: 20px;
+    text-align:center;
+}
+
+#bubble {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(229, 0, 0, 0.9);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(229, 0, 0, 0.5);
+    display: none;
+    z-index: 9999;
+    transition: all 0.5s ease;
+}
+
+.sort-box {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #111;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #E50000;
+    width: fit-content;
+    color: #fff;
+}
+
+.sort-box label {
+    font-weight: bold;
+}
+
+.sort-box select {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #E50000;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.sort-box select:hover {
+    background-color: #E50000;
+    color: #0A0A0A;
+}
