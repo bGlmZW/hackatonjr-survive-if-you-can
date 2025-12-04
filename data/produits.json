@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "nom": "Masque 'God'",
+    "prix": 49.99,
+    "stock": 10,
+    "description": "Masque décoratif de style 'God'.",
+    "image": "https://img.fruugo.com/product/0/08/1761802080_max.jpg",
+    "categorie": "Accessoire"
+  },
+  {
+    "id": 2,
+    "nom": "Batte Cloutée",
+    "prix": 85.00,
+    "stock": 10,
+    "description": "Batte en bois renforcée avec éléments métalliques.",
+    "image": "https://m.media-amazon.com/images/I/71ZtjfNk1yL.jpg",
+    "categorie": "Sport / Accessoire"
+  },
+  {
+    "id": 3,
+    "nom": "Kit de Premier Secours",
+    "prix": 120.00,
+    "stock": 10,
+    "description": "Kit médical complet pour premiers soins.",
+    "image": "https://www.narescue.com/media/catalog/product/cache/6c9c2a8706ce872329c582c5a62c8bc4/8/0/80-0947_g.jpg",
+    "categorie": "Santé"
+  },
+  {
+    "id": 4,
+    "nom": "Gilet Tactique N-4",
+    "prix": 250.00,
+    "stock": 10,
+    "description": "Gilet tactique robuste de type N-4.",
+    "image": "https://cdn.military.eu/fr/media/catalog/product/2/3/2373369_Kamizelka-taktyczna-M-Tac-Sturm-Gen-II-Coyote-na-plyty-rozmiar-M-L-XL-front.jpg",
+    "categorie": "Équipement"
+  },
+  {
+    "id": 5,
+    "nom": "Rifle",
+    "prix": 3500.00,
+    "stock": 10,
+    "description": "Carabine de précision de type rifle.",
+    "image": "https://www.roumaillac.com/527043-home_default/Carabine-daniel-defense-m4a1.jpg",
+    "categorie": "Équipement"
+  }
+]
