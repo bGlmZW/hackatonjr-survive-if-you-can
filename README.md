@@ -1,1 +1,1 @@
-# hackatonjr-survive-if-you-can
+# Survive If You Can
