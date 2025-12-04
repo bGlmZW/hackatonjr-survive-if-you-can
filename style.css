@@ -344,3 +344,213 @@ footer {
     background-color: #E50000;
     color: #0A0A0A;
 }
+
+.input-container {
+    position: relative;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.overlay_input {
+    width: 100%;
+    padding: 12px;
+    background-color: #1A1A1A;
+    border: 1px solid #333;
+    border-radius: 3px;
+    color: white;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.overlay_input:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 8px rgba(229, 0, 0, 0.3);
+}
+
+.overlay_button {
+    background: var(--color-accent);
+    color: var(--color-dark);
+    padding: 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    font-family: var(--font-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.overlay_button:hover {
+    background: #FF6666;
+    transform: scale(1.02);
+}
+
+.switch_text {
+    font-size: 14px;
+    margin-top: 20px;
+    color: #AAA;
+}
+
+.switch_text a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.switch_text a:hover {
+    text-decoration: underline;
+    color: #FF6666;
+}
+
+.toggle-password {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    cursor: pointer;
+    z-index: 5;
+    padding: 0;
+}
+
+.eye_image {
+    width: 20px;
+    height: auto;
+    filter: invert(1);
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.eye_image:hover {
+    opacity: 1;
+}
+
+.headbar_item {
+    color: #ffffff;
+    font-size: 2.7vh;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.headbar_item:hover {
+    text-decoration: underline;
+}
+
+.no_scroll {
+    overflow: hidden;
+}
+
+.hidden {
+    display: none;
+}
+
+.close_btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    line-height: 20px;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close_btn:hover {
+    color: var(--color-accent);
+}
+
+/* --- Compléments manquants détectés --- */
+
+/* Header (positionnement + couleur + z-index) */
+header {
+    position: relative;
+    background-color: var(--color-dark);
+    z-index: 100; /* Header au-dessus du contenu normal mais sous l'overlay */
+}
+
+/* Product card : position relative (pour badge) + état disabled */
+.product-card {
+    position: relative; /* Nécessaire pour le badge */
+}
+.product-card.disabled {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Bouton shop : état disabled */
+.btn-shop.disabled {
+    border-color: #555;
+    color: #555;
+    background-color: transparent;
+    cursor: not-allowed;
+}
+
+/* Shop header (optionnel, remplace margin-top si tu veux centré et padding) */
+.shop-header {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Compteur de caractères (pour formulaires dans overlay) */
+.counter-container {
+    text-align: right;
+    font-size: 0.75em;
+    color: #666;
+    margin-top: 4px;
+}
+
+/* Overlays / popups (fond, transition, affichage) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Fond sombre semi-transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* État caché par défaut */
+    visibility: hidden;
+    opacity: 0;
+
+    /* Transition fluide */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+
+    /* Z-index très haut pour être au-dessus du header et du reste */
+    z-index: 10000;
+    backdrop-filter: blur(5px);
+}
+
+/* Classe JS pour afficher l'overlay */
+.overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.overlay_content {
+    background: var(--color-dark); /* Utilise la couleur du thème (noir) */
+    border: 2px solid var(--color-accent); /* Bordure rouge */
+    padding: 30px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px; /* Largeur max */
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 25px rgba(229, 0, 0, 0.4); /* Lueur rouge externe */
+    color: var(--color-text);
+}
+
+.overlay_content h2 {
+    font-family: var(--font-primary);
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-text);
+}

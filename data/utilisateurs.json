@@ -1,0 +1,38 @@
+[
+    {
+        "nom": "Martin",
+        "prenom": "Lucas",
+        "email": "lucas.martin@email.com",
+        "password": "1234",
+        "role": "vip",
+        "argent": 4890,
+        "id": "1"
+    },
+    {
+        "nom": "Dupont",
+        "prenom": "Emma",
+        "email": "emma.dupont@email.com",
+        "password": "1234",
+        "role": "standard",
+        "argent": 2500,
+        "id": "2"
+    },
+    {
+        "nom": "leroy",
+        "prenom": "nathan",
+        "email": "nathan.leroy@email.com",
+        "password": "1234",
+        "role": "standard",
+        "argent": 99999999999,
+        "id": "3"
+    },
+    {
+        "nom": "moreau",
+        "prenom": "l\u00e9a",
+        "email": "lea.moreau@email.com",
+        "password": "1234",
+        "role": "standard",
+        "argent": 3000,
+        "id": "4"
+    }
+]
