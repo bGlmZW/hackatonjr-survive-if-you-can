@@ -63,11 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 // Connexion réussie : On enregistre l'utilisateur en session
                 $_SESSION['user'] = $user;
 
-                // Log (optionnel, si la fonction existe)
-                if (function_exists('writeToLog')) {
-                    writeToLog($user['email'] . " s'est connecté. (ID: ". $_SESSION['user']['id'] . ")");
-                }
-
+            
                 // REDIRECTION : Directement vers shop.php (car tout est à la racine)
                 header("Location: user_page.php");
                 exit;
