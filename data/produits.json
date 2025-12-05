@@ -2,49 +2,57 @@
   {
     "id": 1,
     "nom": "Masque 'God'",
-    "prix": 49.99,
-    "stock": 10,
+    "prix": 0.00063,
     "image": "https://img.fruugo.com/product/0/08/1761802080_max.jpg",
-    "categorie": "Accessoires"
+    "categorie": 2
   },
   {
     "id": 2,
     "nom": "Batte Cloutée",
-    "prix": 85.00,
-    "stock": 10,
+    "prix": 0.0011,
     "image": "https://m.media-amazon.com/images/I/71ZtjfNk1yL.jpg",
-    "categorie": "Armes blanches"
+    "categorie": 3
   },
   {
     "id": 3,
     "nom": "Kit de Premier Secours",
-    "prix": 120.00,
-    "stock": 10,
+    "prix": 0.0015,
     "image": "https://www.narescue.com/media/catalog/product/cache/6c9c2a8706ce872329c582c5a62c8bc4/8/0/80-0947_g.jpg",
-    "categorie": "Santé"
+    "categorie": 3
   },
   {
     "id": 4,
     "nom": "Gilet Tactique N-4",
-    "prix": 250.00,
-    "stock": 10,
+    "prix": 0.0025,
     "image": "https://cdn.military.eu/fr/media/catalog/product/2/3/2373369_Kamizelka-taktyczna-M-Tac-Sturm-Gen-II-Coyote-na-plyty-rozmiar-M-L-XL-front.jpg",
-    "categorie": "Équipement"
+    "categorie": 2
   },
   {
     "id": 5,
-    "nom": "Rifle",
-    "prix": 3500.00,
-    "stock": 10,
+    "nom": "Fusil",
+    "prix": 0.044,
     "image": "https://www.roumaillac.com/527043-home_default/Carabine-daniel-defense-m4a1.jpg",
-    "categorie": "Fusils"
+    "categorie": 3
   },
   {
     "id": 6,
     "nom": "Morphine 2mg",
-    "prix": 200,
-    "stock": 10,
+    "prix": 0.0032,
     "image": "https://static.vecteezy.com/ti/photos-gratuite/p2/1920217-close-up-of-seringue-avec-liquide-bleu-sur-fond-blanc-gratuit-photo.jpg",
-    "categorie": "Santé"
+    "categorie": 1
+  },
+  {
+    "id": 7,
+    "nom": "Lance-roquette RPG",
+    "prix": 0.061,
+    "image": "https://p.turbosquid.com/ts-thumb/4K/bEvjjE/Ttk7Jkx4/rpg_7_thumbnail_square_0000/jpg/1549473860/600x600/fit_q87/ec6e5bc556ff408de50420c400e2cfb02a5114ce/rpg_7_thumbnail_square_0000.jpg",
+    "categorie": 3
+  },
+  {
+    "id": 8,
+    "nom": "Lampe Torche",
+    "prix": 0.00050,
+    "image": "https://cdn.manomano.com/images/images_products/27532311/P/107719346_1.jpg",
+    "categorie": 4
   }
 ]

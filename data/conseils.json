@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "categorie": 1,
+    "texte": "Apprenez à ligaturer une plaie et à traiter un choc avant les secours.",
+    "image": "https://www.dolphitonic.com/c/1575-category_default/soin-et-pansement.jpg"
+  },
+  {
+    "id": 2,
+    "categorie": 2,
+    "texte": "Barricadez portes et fenêtres, créez des angles morts et prévoyez une issue de fuite.",
+    "image": "https://www.wikihow.com/images_en/thumb/5/58/Lock-a-Door-Without-a-Lock-Step-2.jpg/v4-460px-Lock-a-Door-Without-a-Lock-Step-2.jpg"
+  },
+  {
+    "id": 3,
+    "categorie": 3,
+    "texte": "Frappez depuis l'ombre, ciblez rapidement les points vitaux et exploitez la surprise.",
+    "image": "https://www.shutterstock.com/image-photo/single-person-walking-on-street-600nw-493126720.jpg"
+  },
+  {
+    "id": 4,
+    "categorie": 3,
+    "texte": "Vérifiez toujours charge, détente et canon ; maîtrisez le recul et la visée.",
+    "image": "https://m.media-amazon.com/images/M/MV5BZGJlZjNiNzgtNTk2Mi00ZGUyLTg5NGItNmMyZjU2NTA2ZWM0XkEyXkFqcGc@._V1_.jpg"
+  },
+  {
+    "id": 4,
+    "categorie": 4,
+    "texte": "Localisez eau et abris, restez discret et observez avant de bouger.",
+    "image": "https://www.bunker-swiss.com/wp-content/uploads/2024/06/Article_Vivre-dans-un-bunker_IMA.webp"
+  }
+]

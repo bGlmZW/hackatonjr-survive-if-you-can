@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "nom": "Santé"
+  },
+  {
+    "id": 2,
+    "nom": "Défense"
+  },
+  {
+    "id": 3,
+    "nom": "Armes"
+  },
+  {
+    "id": 4,
+    "nom": "Survie"
+  }
+]

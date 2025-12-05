@@ -1,38 +1,42 @@
 [
     {
-        "nom": "Martin",
-        "prenom": "Lucas",
-        "email": "lucas.martin@email.com",
+        "pseudo": "managersupreme",
+        "nom": "Gio",
+        "prenom": "Vanni",
         "password": "1234",
-        "role": "vip",
-        "argent": 4890,
+        "argent": 1.2,
         "id": "1"
     },
     {
+        "pseudo": "SushiChou",
         "nom": "Dupont",
         "prenom": "Emma",
-        "email": "emma.dupont@email.com",
         "password": "1234",
-        "role": "standard",
-        "argent": 2500,
+        "argent": 0.09,
         "id": "2"
     },
     {
+        "pseudo": "TrollWarrior",
         "nom": "leroy",
         "prenom": "nathan",
-        "email": "nathan.leroy@email.com",
         "password": "1234",
-        "role": "standard",
         "argent": 99999999999,
         "id": "3"
     },
     {
+        "pseudo": "thepurge",
         "nom": "moreau",
         "prenom": "l\u00e9a",
-        "email": "lea.moreau@email.com",
         "password": "1234",
-        "role": "standard",
-        "argent": 3000,
+        "argent": 0.01,
         "id": "4"
+    },
+    {
+        "pseudo": "rémy",
+        "nom": "moreau",
+        "prenom": "l\u00e9a",
+        "password": "1234",
+        "argent": 10,
+        "id": "5"
     }
 ]
