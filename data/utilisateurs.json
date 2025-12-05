@@ -1,0 +1,42 @@
+[
+    {
+        "pseudo": "managersupreme",
+        "nom": "Gio",
+        "prenom": "Vanni",
+        "password": "1234",
+        "argent": 1.2,
+        "id": "1"
+    },
+    {
+        "pseudo": "SushiChou",
+        "nom": "Dupont",
+        "prenom": "Emma",
+        "password": "1234",
+        "argent": 0.09,
+        "id": "2"
+    },
+    {
+        "pseudo": "TrollWarrior",
+        "nom": "leroy",
+        "prenom": "nathan",
+        "password": "1234",
+        "argent": 999.2702599999998,
+        "id": "3"
+    },
+    {
+        "pseudo": "thepurge",
+        "nom": "moreau",
+        "prenom": "l\u00e9a",
+        "password": "1234",
+        "argent": 0.01,
+        "id": "4"
+    },
+    {
+        "pseudo": "r\u00e9my",
+        "nom": "moreau",
+        "prenom": "l\u00e9a",
+        "password": "1234",
+        "argent": 10,
+        "id": "5"
+    }
+]
