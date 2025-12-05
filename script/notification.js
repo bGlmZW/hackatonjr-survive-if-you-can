@@ -4,7 +4,9 @@ const messages = [
 "🚨 Attention à la sirène...",
 "🔪 Meurtre signalé près de votre position",
 "⚠️ Ne restez pas ici trop longtemps",
-"⚠️ Pillage en cours"
+"⚠️ Pillage en cours",
+"⚡ Coupure de courant imminente",
+"🛒 Pillage de magasin signalé"
 ];
 
 function showBubble() {

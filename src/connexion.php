@@ -9,13 +9,11 @@ if (file_exists($data_file)) {
     $data = json_decode($json_data, true);
 }
 
-// Traitement du formulaire
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     $pseudo = isset($_POST['pseudo']) ? htmlspecialchars(trim(strtolower($_POST['pseudo']))) : ''; 
     
     $password = isset($_POST['password']) ? trim($_POST['password']) : '';
-
 
     $user_found = false;
 
@@ -25,8 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($user_pseudo === $pseudo) {
             $user_found = true;
             
-            if ($password === $user['password']) { // sécurité ?
-                
+            if ($password === $user['password']) {
                 $_SESSION['user'] = $user;
                 header("Location: Utilisateur.php");
                 exit;

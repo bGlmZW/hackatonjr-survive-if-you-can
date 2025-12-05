@@ -5,7 +5,7 @@ include_once('Class.php');
 
 use Class\Conseil;
 
-$liste_categories = \Class\construireTableau();
+$liste_categories = \Class\constructeurCategorieTab();
 
 $json_data = file_get_contents("../data/conseils.json");
 $data = json_decode($json_data, true);
@@ -29,15 +29,12 @@ foreach ($data as $conseil) {
 </main>
 
 <div class="conseil-container">
-
     <div class="conseil-card">
         <h2 class="conseil-categorie"><?php echo $liste_conseils[1]->categorie->nom; ?></h2>
 
         <img src=<?php echo $liste_conseils[1]->image; ?> alt="Image conseil" class="conseil-image">
 
-        <p class="conseil-texte">
-            <?php echo $liste_conseils[1]->texte; ?>
-        </p>
+        <p class="conseil-texte"><?php echo $liste_conseils[1]->texte; ?></p>
 
         <button class="conseil-btn-suivant">Suivant</button>
     </div>

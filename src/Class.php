@@ -105,7 +105,7 @@ class Conseil
     }
 }
 
-function construireTableau() {
+function constructeurCategorieTab() {
     $json_data = file_get_contents("../data/categories.json");
     $data_categories = json_decode($json_data, true);
 
@@ -152,10 +152,5 @@ class Panier
     {
         $this->liste_produits_panier = $liste_produits_panier;
     }
-}
-
-class Notification
-{
-
 }
 ?>

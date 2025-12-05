@@ -1,7 +1,3 @@
-/* -------------------- */
-/* --- RESET / BASE --- */
-/* -------------------- */
-
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +5,10 @@
 }
 
 :root {
-    --color-dark: #0A0A0A; /* Noir Profond */
-    --color-accent: #E50000; /* Rouge Vif */
-    --color-text: #F0F0F0; /* Blanc Cassé */
-    --font-primary: 'Oswald', sans-serif; /* Police Dure/Condensée */
+    --color-dark: #0A0A0A;
+    --color-accent: #E50000;
+    --color-text: #F0F0F0;
+    --font-primary: 'Oswald', sans-serif;
 }
 
 body {
@@ -32,28 +28,23 @@ a:hover {
     color: #FF6666;
 }
 
-
 #countdown {
-    background-color: #1A1A1A; /* Fond légèrement plus clair pour le contraste */
+    background-color: #1A1A1A;
     border: 3px solid var(--color-accent);
     padding: 15px 30px;
     margin: 20px 0;
-    font-family: 'Courier New', monospace; /* Police numérique/terminale */
+    font-family: 'Courier New', monospace;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
-/* -------------------- */
-/* --- EN-TÊTE (HEADER) --- */
-/* -------------------- */
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    border-bottom: 2px solid var(--color-accent); /* Ligne de séparation rouge */
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .logo {
@@ -64,27 +55,21 @@ header {
     letter-spacing: 5px;
 }
 
-/* Style des icônes de navigation */
 .icon-nav {
     display: flex;
-    gap: 15px; /* Espacement entre les icônes */
+    gap: 15px;
 }
 
 .nav-icon {
-    font-size: 1.5em; /* Taille des icônes */
-    color: var(--color-text); /* Couleur des icônes (Blanc) */
+    font-size: 1.5em;
+    color: var(--color-text);
     padding: 5px;
     transition: color 0.3s, background-color 0.3s;
 }
 
 .nav-icon:hover {
-    color: var(--color-accent); /* Icône devient rouge au survol */
+    color: var(--color-accent);
 }
-
-
-/* -------------------- */
-/* --- SECTION PRINCIPALE (HERO) --- */
-/* -------------------- */
 
 .hero {
     min-height: 80vh;
@@ -106,7 +91,7 @@ header {
 
 .hero p {
     font-size: 1.2em;
-    margin-bottom: 50px; /* Plus grand espace sans le timer */
+    margin-bottom: 50px;
     color: #888;
 }
 
@@ -115,14 +100,14 @@ header {
 .btn-primary {
     display: inline-block;
     background-color: var(--color-accent);
-    color: var(--color-dark); /* Texte noir sur fond rouge */
+    color: var(--color-dark);
     padding: 15px 40px;
     text-transform: uppercase;
     font-weight: bold;
     font-family: var(--font-primary);
     border: none;
     cursor: pointer;
-    box-shadow: 0 0 10px var(--color-accent); /* Effet de lueur rouge */
+    box-shadow: 0 0 10px var(--color-accent);
     transition: background-color 0.3s, box-shadow 0.3s;
 }
 
@@ -130,8 +115,6 @@ header {
     background-color: #FF6666;
     box-shadow: 0 0 20px #FF6666;
 }
-
-/* --- EFFET GLITCH (Optionnel mais immersif) --- */
 
 .glitch {
     position: relative;
@@ -159,11 +142,6 @@ header {
     text-shadow: 1px 0 #00FFC0; 
 }
 
-
-/* -------------------- */
-/* --- PIED DE PAGE (FOOTER) --- */
-/* -------------------- */
-
 footer {
     padding: 20px;
     text-align: center;
@@ -172,34 +150,26 @@ footer {
     color: #666;
 }
 
-
-/* -------------------- */
-/* --- BOUTIQUE (SHOP) --- */
-/* -------------------- */
-
 .shop-container {
-    max-width: 1200px; /* Limite la largeur totale pour que ça reste centré */
+    max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-/* LA GRILLE MAGIQUE */
 .product-grid {
     display: grid;
-    /* Crée autant de colonnes que possible. Chaque colonne fait minimum 280px */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 30px; /* Espace entre les cartes */
+    gap: 30px;
     justify-content: center;
 }
 
-/* La Carte Produit */
 .product-card {
     background-color: #111;
     border: 1px solid #333;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s, border-color 0.3s;
-    height: 100%; /* Assure que toutes les cartes ont la même hauteur */
+    height: 100%;
 }
 
 .product-card:hover {
@@ -208,10 +178,9 @@ footer {
     box-shadow: 0 5px 15px rgba(229, 0, 0, 0.2);
 }
 
-/* L'Image : C'est ici que ça bloquait souvent */
 .card-image {
     width: 100%;
-    height: 250px; /* HAUTEUR FIXE OBLIGATOIRE pour un alignement propre */
+    height: 250px;
     overflow: hidden;
     background-color: #000;
 }
@@ -219,22 +188,21 @@ footer {
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* L'image remplit le cadre sans être déformée */
+    object-fit: cover;
     filter: grayscale(100%);
     transition: filter 0.3s, transform 0.5s;
 }
 
 .product-card:hover .card-image img {
     filter: grayscale(0%);
-    transform: scale(1.05); /* Petit zoom sympa au survol */
+    transform: scale(1.05);
 }
 
-/* Infos Textes */
 .card-info {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Pousse le contenu pour remplir la carte */
+    flex-grow: 1;
 }
 
 .card-info h3 {
@@ -251,13 +219,12 @@ footer {
     font-weight: bold;
 }
 
-/* Bouton */
 .btn-shop {
     background-color: transparent;
     border: 2px solid var(--color-accent);
     color: var(--color-accent);
     padding: 10px;
-    margin-top: auto; /* Pousse le bouton tout en bas de la carte */
+    margin-top: auto;
     font-family: var(--font-primary);
     font-weight: bold;
     text-transform: uppercase;
@@ -270,22 +237,6 @@ footer {
     color: var(--color-dark);
 }
 
-/* .close_btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 28px;
-    line-height: 20px;
-    color: #888;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.close_btn:hover {
-    color: var(--color-accent);
-}
-
-/* Conteneur des champs (pour positionner l'oeil) */
 .input-container {
     position: relative;
     margin-bottom: 15px;
@@ -309,7 +260,6 @@ footer {
     box-shadow: 0 0 8px rgba(229, 0, 0, 0.3);
 }
 
-/* Compteur de caractères */
 .counter-container {
     text-align: right;
     font-size: 0.75em;
@@ -317,7 +267,7 @@ footer {
     margin-top: 4px;
 }
 
-/* Bouton principal de la popup */
+
 .overlay_button {
     background: var(--color-accent);
     color: var(--color-dark);
@@ -339,7 +289,6 @@ footer {
     transform: scale(1.02);
 }
 
-/* Lien basculer Inscription/Connexion */
 .switch_text {
     font-size: 14px;
     margin-top: 20px;
@@ -358,13 +307,12 @@ footer {
     color: #FF6666;
 }
 
-/* Bouton Oeil (Voir mot de passe) */
 .toggle-password {
     background: none;
     border: none;
     position: absolute;
     right: 10px;
-    top: 12px; /* Ajuster selon le padding de l'input */
+    top: 12px;
     cursor: pointer;
     z-index: 5;
     padding: 0;
@@ -373,7 +321,7 @@ footer {
 .eye_image {
     width: 20px;
     height: auto;
-    filter: invert(1); /* Rend l'icône blanche si elle est noire */
+    filter: invert(1);
     opacity: 0.7;
     transition: opacity 0.3s;
 }
@@ -382,7 +330,6 @@ footer {
     opacity: 1;
 }
 
-/* Autres éléments (Headbar item si utilisé) */
 .headbar_item {
     color: #ffffff;
     font-size: 2.7vh;
@@ -394,17 +341,13 @@ footer {
     text-decoration: underline;
 }
 
-/* Utilitaires JS */
 .no_scroll {
-    overflow: hidden; /* Empêche le scroll quand la popup est ouverte */
+    overflow: hidden;
 }
 
 .hidden {
     display: none;
 }
-
-
-/* user_styles.css - Styles spécifiques à la page profil */
 
 .profile-header {
     text-align: center;
@@ -426,7 +369,6 @@ footer {
     font-size: 1.2em;
 }
 
-/* Grille du tableau de bord */
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -436,7 +378,6 @@ footer {
     padding: 0 20px;
 }
 
-/* Carte de style "Survivor" */
 .survivor-card {
     background-color: #111;
     border: 1px solid #333;
@@ -470,7 +411,6 @@ footer {
     color: var(--color-accent);
 }
 
-/* Affichage des données */
 .data-row {
     margin-bottom: 15px;
     font-size: 1.1em;
@@ -490,7 +430,6 @@ footer {
     letter-spacing: 1px;
 }
 
-/* Gros affichage du solde */
 .balance-display {
     font-family: 'Courier New', monospace;
     font-size: 3.5em;
@@ -522,7 +461,6 @@ footer {
     background-color: var(--color-accent);
 }
 
-/* Zone logout */
 .logout-section {
     text-align: center;
     margin-bottom: 60px;
@@ -719,25 +657,20 @@ footer {
     color: var(--color-accent);
 }
 
-/* --- Compléments manquants détectés --- */
-
-/* Header (positionnement + couleur + z-index) */
 header {
     position: relative;
     background-color: var(--color-dark);
-    z-index: 100; /* Header au-dessus du contenu normal mais sous l'overlay */
+    z-index: 100;
 }
 
-/* Product card : position relative (pour badge) + état disabled */
 .product-card {
-    position: relative; /* Nécessaire pour le badge */
+    position: relative;
 }
 .product-card.disabled {
     opacity: 0.6;
     pointer-events: none;
 }
 
-/* Bouton shop : état disabled */
 .btn-shop.disabled {
     border-color: #555;
     color: #555;
@@ -745,13 +678,11 @@ header {
     cursor: not-allowed;
 }
 
-/* Shop header (optionnel, remplace margin-top si tu veux centré et padding) */
 .shop-header {
     text-align: center;
     padding: 20px;
 }
 
-/* Compteur de caractères (pour formulaires dans overlay) */
 .counter-container {
     text-align: right;
     font-size: 0.75em;
@@ -759,46 +690,38 @@ header {
     margin-top: 4px;
 }
 
-/* Overlays / popups (fond, transition, affichage) */
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85); /* Fond sombre semi-transparent */
+    background: rgba(0, 0, 0, 0.85);
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* État caché par défaut */
     visibility: hidden;
     opacity: 0;
-
-    /* Transition fluide */
     transition: opacity 0.3s ease-in-out, visibility 0.3s;
-
-    /* Z-index très haut pour être au-dessus du header et du reste */
     z-index: 10000;
     backdrop-filter: blur(5px);
 }
 
-/* Classe JS pour afficher l'overlay */
 .overlay.active {
     visibility: visible;
     opacity: 1;
 }
 
 .overlay_content {
-    background: var(--color-dark); /* Utilise la couleur du thème (noir) */
-    border: 2px solid var(--color-accent); /* Bordure rouge */
+    background: var(--color-dark);
+    border: 2px solid var(--color-accent);
     padding: 30px;
     border-radius: 5px;
     width: 100%;
-    max-width: 400px; /* Largeur max */
+    max-width: 400px;
     text-align: center;
     position: relative;
-    box-shadow: 0 0 25px rgba(229, 0, 0, 0.4); /* Lueur rouge externe */
+    box-shadow: 0 0 25px rgba(229, 0, 0, 0.4);
     color: var(--color-text);
 }
 
@@ -885,11 +808,6 @@ header {
     transform: scale(1.05);
 }
 
-/* -------------------- */
-/* --- PANIER PRODUITS --- */
-/* -------------------- */
-
-/* Container principal du panier */
 .panier-container {
     display: flex;
     flex-wrap: wrap;
@@ -900,7 +818,6 @@ header {
     max-width: 1000px;
 }
 
-/* Carte individuelle du produit */
 .produit-card {
     background: rgba(0, 0, 0, 0.85);
     border: 2px solid var(--color-accent);
@@ -920,7 +837,6 @@ header {
     box-shadow: 0 6px 15px rgba(229, 0, 0, 0.3);
 }
 
-/* Catégorie du produit */
 .produit-categorie {
     font-size: 0.9em;
     font-weight: bold;
@@ -930,7 +846,6 @@ header {
     letter-spacing: 1px;
 }
 
-/* Image du produit */
 .produit-image {
     width: 100%;
     height: 180px;
@@ -945,7 +860,6 @@ header {
     filter: brightness(1.1);
 }
 
-/* Informations du produit */
 .produit-info {
     text-align: center;
     display: flex;
@@ -965,7 +879,6 @@ header {
     margin: 0;
 }
 
-/* Bouton retirer / ajouter */
 .produit-btn {
     background-color: var(--color-accent);
     color: var(--color-dark);
@@ -985,15 +898,10 @@ header {
     transform: scale(1.05);
 }
 
-/* Produit en rupture de stock */
 .produit-card.disabled {
     opacity: 0.5;
     pointer-events: none;
 }
-
-/* -------------------- */
-/* --- RÉSUMÉ PANIER & PAIEMENT --- */
-/* -------------------- */
 
 .panier-summary {
     margin: 60px auto 40px auto;
@@ -1065,7 +973,6 @@ header {
     box-shadow: 0 0 10px var(--color-accent);
 }
 
-/* Effet pulsation pour attirer l'attention */
 @keyframes pulse {
     0%, 100% {
         box-shadow: 0 0 15px rgba(229, 0, 0, 0.5);

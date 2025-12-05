@@ -16,7 +16,7 @@ if (isset($_GET['supprimer'])) {
                 }
             }
         }
-        
+        unset($_SESSION['liste_produits_id'][$key]);
         $_SESSION['liste_produits_id'] = array_values($_SESSION['liste_produits_id']);
     }
     header('Location: Panier.php');
@@ -26,11 +26,11 @@ if (isset($_GET['supprimer'])) {
 use Class\Produit;
 use Class\Panier;
 
-$liste_categories = \Class\construireTableau();
+$liste_categories = \Class\constructeurCategorieTab();
 
 function espaceFooter($contexte) {
     echo "<main>";
-    echo "<section class='profile-header'>";
+    echo "<section class=' profile-header'>";
     echo "<h1>" . $contexte . "</h1>";
     echo "<p>Retrouvez vos choix ici.</p>";
     echo "</section>";

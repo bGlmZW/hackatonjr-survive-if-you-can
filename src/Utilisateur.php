@@ -29,15 +29,15 @@ include 'header.php';
             
             <div class="data-row">
                 <span class="data-label">Pseudo</span>
-                <span class="data-value"><?php echo htmlspecialchars($user['pseudo']); ?></span>
+                <span class="data-value"><?php echo $user['pseudo']; ?></span>
             </div>
             <div class="data-row">
                 <span class="data-label">Nom</span>
-                <span class="data-value"><?php echo htmlspecialchars($user['nom']); ?></span>
+                <span class="data-value"><?php echo $user['nom']; ?></span>
             </div>
             <div class="data-row">
                 <span class="data-label">Prénom</span>
-                <span class="data-value"><?php echo htmlspecialchars($user['prenom']); ?></span>
+                <span class="data-value"><?php echo $user['prenom']; ?></span>
             </div>
         </div>
 
@@ -54,20 +54,14 @@ include 'header.php';
             </div>
 
             <div style="margin-top: auto;">
-                <a href="Boutique.php" class="btn-primary" style="width: 100%; text-align: center; display: block;">
-                    Accéder au Ravitaillement
-                </a>
+                <a href="Boutique.php" class="btn-primary" style="width: 100%; text-align: center; display: block;">Accéder au Ravitaillement</a>
             </div>
         </div>
-
     </div>
 
     <div class="logout-section">
-        <a href="Logout.php" class="btn-shop" style="padding: 15px 50px; border-color: #666; color: #888;">
-            Se déconnecter
-        </a>
+        <a href="Logout.php" class="btn-shop" style="padding: 15px 50px; border-color: #666; color: #888;">Se déconnecter</a>
     </div>
-
 </main>
 
 <?php include 'footer.php'; ?>

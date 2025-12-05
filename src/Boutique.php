@@ -6,7 +6,7 @@ include_once('Class.php');
 use Class\Produit;
 use Class\Boutique;
 
-$liste_categories = \Class\construireTableau();
+$liste_categories = \Class\constructeurCategorieTab();
 
 $json_data = file_get_contents("../data/produits.json");
 $data_produits = json_decode($json_data, true); 
@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produit_id'])) {
     if (!isset($_SESSION['somme'])) {
         $_SESSION['somme'] = 0;
     }
+
     $_SESSION['liste_produits_id'][] = $_POST['produit_id'];
 
     $json_data = file_get_contents("../data/produits.json");

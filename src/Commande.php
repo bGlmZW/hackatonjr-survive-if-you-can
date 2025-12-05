@@ -1,6 +1,5 @@
 <?php
 $pageTitle = "Commande réussie";
-
 include_once('Header.php');
 ?>
 
@@ -17,6 +16,4 @@ include_once('Header.php');
 
 <script src="/script/countdown.js"></script>
 
-<?php
-include 'src/footer.php';
-?>
+<?php include 'Footer.php'; ?>

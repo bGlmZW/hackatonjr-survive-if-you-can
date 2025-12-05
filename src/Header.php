@@ -5,8 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo isset($pageTitle) ? $pageTitle : 'American Nightmare - Hackaton Jr'; ?></title>
-    
+    <title><?php echo $pageTitle ?></title>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" type="image/png" href="https://static.thenounproject.com/png/3194193-200.png"/>
@@ -28,13 +27,7 @@
                 }
             ?>
         </nav>
-        
     </header>
-    
-    <?php 
-        // Gestion du chemin relatif
-        if (!isset($path_parent)) { $path_parent = ''; } 
-    ?>
 
     <div class="overlay" id="signin_overlay">
         <div class="overlay_content">
@@ -43,7 +36,7 @@
             
             <form id="signin_form" action="/src/Connexion.php" method="POST">
                 <div class="input-container">
-                    <input class="overlay_input" type="text" id="pseudoInputLogin" name="pseudo" placeholder="Pseudo" maxlength="50" required>
+                    <input class="overlay_input" type="text" id="pseudoInputLogin" name="pseudo" placeholder="Pseudo" maxlength="20" required>
                 </div>
                 <div class="input-container">
                     <input class="overlay_input" type="password" id="passwordInputLogin" name="password" placeholder="Mot de passe" maxlength="20" required>
@@ -60,8 +53,6 @@
     </div>
     
     <script src="/script/registration.js"></script>
-
-    <div id="bubble_form" class="hidden"></div>
 
     <script src="/script/bubble.js"></script>
 

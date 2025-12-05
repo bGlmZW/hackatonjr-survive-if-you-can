@@ -1,7 +1,7 @@
 <?php
 session_start();
     if($_SESSION['user']['argent'] < $_SESSION['somme']) {
-        echo "<script>alert('Vous n'avez pas les fonds nécessaires')</script>";
+        echo "<script>alert('Echec. Vous n'avez pas les fonds nécessaires.')</script>";
         header('Location: Panier.php');
         exit();
     } else {
@@ -18,6 +18,7 @@ session_start();
 
         file_put_contents('../data/utilisateurs.json', json_encode($data, JSON_PRETTY_PRINT));
         unset($_SESSION['liste_produits_id']);
+        unset($_SESSION['somme']);
         header('Location: Commande.php');
     }
 ?>

@@ -18,6 +18,4 @@ include 'src/header.php';
 
 <script src="/script/countdown.js"></script>
 
-<?php
-include 'src/footer.php';
-?>
+<?php include 'src/footer.php'; ?>
