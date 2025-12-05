@@ -696,7 +696,7 @@ if (isset($_GET['start'], $_GET['end'], $_GET['mode'])) {
 <header>
     <div class="logo">BEYOND SURVIVAL</div>
     <nav>
-        <a href="index.php">Accueil</a>
+        <a href="../index.php">Accueil</a>
     </nav>
 </header>
 
