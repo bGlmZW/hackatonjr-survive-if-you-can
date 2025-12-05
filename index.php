@@ -12,7 +12,7 @@ include 'src/header.php';
             <span class="timer-label">Fin dans</span>
             <span id="demo" class="timer-value">00:00:00</span>
         </div>
-        <a href="/src/Map.php" class="btn-primary">ENTRER DANS LA ZONE</a>
+        <a href="/carte/Carte.php" class="btn-primary">ENTRER DANS LA ZONE</a>
     </section>
 </main>
 
