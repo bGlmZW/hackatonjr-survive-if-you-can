@@ -20,7 +20,7 @@
         "nom": "leroy",
         "prenom": "nathan",
         "password": "1234",
-        "argent": 99999999999,
+        "argent": 999.98957,
         "id": "3"
     },
     {
@@ -32,7 +32,7 @@
         "id": "4"
     },
     {
-        "pseudo": "rémy",
+        "pseudo": "r\u00e9my",
         "nom": "moreau",
         "prenom": "l\u00e9a",
         "password": "1234",

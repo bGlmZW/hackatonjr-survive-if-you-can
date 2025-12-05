@@ -133,26 +133,11 @@ class Panier
                     <h3>' . $produit->nom . '</h3>
                     <p>Prix : ' . $produit->prix . ' ₿</p>
                 </div>
-                <form method="POST" action="">
+                <form method="POST" action="Retirer_produit.php">
                     <input type="hidden" name="produit_id" value="' . $produit->id . '">
                     <a href="Panier.php?supprimer=' . $produit->id . '">Retirer du panier</a>
                 </form>
             </div>';
-        }
-    }
-
-    public function ajouterPanier(Produit $produit) {
-        $this->liste_produits_panier[] = $produit;
-    }
-
-
-    public function enleverProduit($produit_id)
-    {
-        foreach ($this->liste_produits_panier as $index => $produit) {
-            if ($produit->id == $produit_id) {
-                unset($this->liste_produits_panier[$index]);
-                $this->liste_produits_panier = array_values($this->liste_produits_panier);
-            }
         }
     }
 

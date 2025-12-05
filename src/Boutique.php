@@ -27,7 +27,22 @@ if (!isset($_SESSION['liste_produits_id'])) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['produit_id'])) {
+    if (!isset($_SESSION['somme'])) {
+        $_SESSION['somme'] = 0;
+    }
     $_SESSION['liste_produits_id'][] = $_POST['produit_id'];
+
+    $json_data = file_get_contents("../data/produits.json");
+    $data = json_decode($json_data, true);
+
+    foreach ($data as $item) {
+        if($item['id'] == $_POST['produit_id']) {
+            $val = $item['prix'];
+
+            break;
+        }
+    }
+    $_SESSION['somme'] += $val;
 }
 
 function quickSort($array, $type) {

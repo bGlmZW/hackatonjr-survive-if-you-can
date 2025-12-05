@@ -990,3 +990,95 @@ header {
     opacity: 0.5;
     pointer-events: none;
 }
+
+/* -------------------- */
+/* --- RÉSUMÉ PANIER & PAIEMENT --- */
+/* -------------------- */
+
+.panier-summary {
+    margin: 60px auto 40px auto;
+    max-width: 500px;
+    background-color: #111;
+    border: 2px solid var(--color-accent);
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(229, 0, 0, 0.3);
+    text-align: center;
+}
+
+.panier-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333;
+}
+
+.total-label {
+    font-family: var(--font-primary);
+    font-size: 1.3em;
+    color: #888;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.total-amount {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5em;
+    color: var(--color-accent);
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(229, 0, 0, 0.4);
+}
+
+.btn-payer {
+    width: 100%;
+    background-color: var(--color-accent);
+    color: var(--color-dark);
+    padding: 18px 30px;
+    font-family: var(--font-primary);
+    font-size: 1.3em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--color-accent);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.btn-payer i {
+    font-size: 1.1em;
+}
+
+.btn-payer:hover {
+    background-color: #FF6666;
+    box-shadow: 0 0 25px #FF6666;
+    transform: translateY(-3px);
+}
+
+.btn-payer:active {
+    transform: translateY(0);
+    box-shadow: 0 0 10px var(--color-accent);
+}
+
+/* Effet pulsation pour attirer l'attention */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 15px rgba(229, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(229, 0, 0, 0.8);
+    }
+}
+
+.btn-payer {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.btn-payer:hover {
+    animation: none;
+}
